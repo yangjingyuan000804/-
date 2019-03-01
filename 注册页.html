@@ -1,0 +1,71 @@
+<html>
+<head>
+<script>
+function queren(){
+var password = document.getElementById("password").value;
+var sPassword = document.getElementById("sure password").value;
+if (password == sPassword)
+{
+	var qr = document.getElementById("queren");
+	qr.innerHTML = "确认密码";
+}
+else{
+    var qr = document.getElementById("queren");
+	qr.innerHTML = " ";
+}
+}
+</script>
+<style>
+#haha{
+      position:absolute;
+	  left:800px;
+	  top:50px;
+	  border-style:solid;
+	  border-color:gray;
+	  border-radius:40px;
+	  height:500px;
+	  width:300px;
+}
+
+#welcome{
+           padding:40px;
+           width:250px;
+           height:100px;
+		   margin:0px;
+           font-size:50px;
+		   color:red;
+}
+
+
+#queren{
+    position:absolute;
+	left:167px;
+    height:21.33px;
+	width:50px;
+	font-size:18px;
+	color:gray;
+}
+
+</style>
+</head>
+<body background="注册.jpg">
+<div id="haha">
+<p id = "welcome">欢迎注册：</p>
+<form>
+<p>用户名：</p><input type="text" id="name">
+</br>
+<p>密码：</p><input type="password" id="password">
+</br>
+<p>确认密码：</p>
+<div>
+<div id="queren" class="ensure"></div>
+<input type="password" id="sure password" onblur="queren()" class="ensure">
+</div>
+</br>
+<button type="sumbit">确认</button>
+</form>
+
+</div>
+
+</body>
+</html>

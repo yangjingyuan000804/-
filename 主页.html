@@ -1,0 +1,75 @@
+<html>
+<head>
+<script type="text/javascript" src="主页.js"></script>
+<link style="text/css" rel="stylesheet" href="主页.css">
+</head>
+<body>
+<div id="header">
+<form id="former"><input id="search" class="headDiv" placeholder=" 请搜索。。。"></form>
+<select id="sel" class="headDiv" onchange="self.location.href=options[selectedIndex].value">
+<option value="主页.html">登录扣这</option>
+<option value="登录页.html">登录</option>
+<option value="注册页.html">注册</option>
+<option value="主页.html">退出登录</option>
+</select>
+</div>
+<div id="container">
+<div id="middle" class="con">
+<div class="line">
+<canvas id="down" onclick="back()"></canvas>
+<div id="turn"><img id="beautiful" src="index0.jpg"/></div>
+<canvas id="up" onclick="up()"></canvas>
+</div>
+<div id="box">
+<div class="point" style="background-color:red;" onclick="count = 0;circle();"></div>
+<div class="point" style="background-color:gray;" onclick="count = 1;circle();"></div>
+<div class="point" style="background-color:gray;" onclick="count = 2;circle();"></div>
+<div class="point" style="background-color:gray;" onclick="count = 3;circle();"></div>
+<div class="point" style="background-color:gray;" onclick="count = 4;circle();"></div>
+<div class="point" style="background-color:gray;" onclick="count = 5;circle();"></div>
+</div>
+</div>
+<div id="left" class="con">
+<img src="素材2.gif"/>
+<img src="素材1.gif"/>
+</div>
+<div id="right" class="con">
+<img src="素材3.jpg" style="margin-bottom:30px;"/>
+<img src="素材4.jpg"/>
+<a id="music" href="播放页.html">点我开始听音乐吧！</a>
+</div>
+</div>
+<div id="footer">解释权归一个不知名的程序猿所有。</div>
+<script type="text/javascript">
+var c = document.getElementById("down");
+var cxt1 = c.getContext("2d");
+cxt1.lineWidth = 10;
+cxt1.strokeStyle = "#BBB";
+cxt1.fillStyle = "#BBB";
+cxt1.moveTo(280,0);
+cxt1.lineTo(220,0);
+cxt1.lineTo(0,75);
+cxt1.lineTo(220,150);
+cxt1.lineTo(280,150);
+cxt1.lineTo(60,75);
+cxt1.lineTo(280,0);
+cxt1.stroke();
+cxt1.fill();
+
+var c1 = document.getElementById("up");
+var cxt2 = c1.getContext("2d");
+cxt2.lineWidth = 10;
+cxt2.strokeStyle = "#BBB";
+cxt2.fillStyle = "#BBB";
+cxt2.moveTo(0,0);
+cxt2.lineTo(60,0);
+cxt2.lineTo(280,75);
+cxt2.lineTo(60,150);
+cxt2.lineTo(0,150);
+cxt2.lineTo(220,75);
+cxt2.lineTo(0,0);
+cxt2.stroke();
+cxt2.fill();
+</script>
+</body>
+</html>

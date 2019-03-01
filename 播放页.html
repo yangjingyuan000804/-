@@ -1,0 +1,41 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="bofang.css">
+</head>
+<body>
+<div id="progress">
+<div id="start" class="time">0:00</div>
+<audio id="haha" src="C:/Users/DX5/Desktop/新建文件夹/光年之外.mp3"></audio>
+<div id="bar" onclick="jump(this)">
+<div id="bar2"></div>
+<div id="bar1" onmousedown="drag(this)"></div>
+</div>
+<div id="end" class="time"></div>
+</div>
+<div id="kongjian">
+<div class="kongjian"><image src="顺序播放.jpg" id="bofangshunxu" onclick="changeBoFang()"/></div>
+<div class="kongjian"><image src="后退.png" onclick="step()"></div>
+<div class="kongjian"><image src="播放.jpg" id="pause" onclick="pause();progress()"/></div>
+<div class="kongjian"><image src="前进.png" onclick="back()"></div>
+<select onchange="music()" id="list">
+<option>打开歌单</option>
+<option>光年之外</option>
+<option>岁月神偷</option>
+<option>夜空中最亮的星</option>
+</select>
+</div>
+</body>
+<script src="bofang.js" type="text/javascript"></script>
+<script>
+	var x = document.getElementById("bar1");
+	var y = document.getElementById("bar2");
+	 x.style.left = "330";
+	 y.style.width = "0";
+function time(){
+	var div = document.getElementById("end");
+	div.innerText = "0:00";
+}
+time();
+</script>
+</html>
